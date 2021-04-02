@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace foremny.App01
+namespace app01
 {
     class Program
     {
