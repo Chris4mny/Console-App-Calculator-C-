@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace foremny.App01
+namespace app01
 {
     class SixFunctionCalculator
     {
@@ -30,11 +30,13 @@ namespace foremny.App01
 
             DetermineToContinue(useAgain); // if continue is yes run again, if no end program 
         }
+        
         public void WelcomeToCalculatorMessage() // welcome message to calculator program
         {
             Console.WriteLine("Welcome to the Six Function Calculator Program");
 
         }
+        
         public double Calculator(double numberOne, double numberTwo, char calcFunction) // pick one of six functions to use
         {
             if (calcFunction == '+')
@@ -86,8 +88,8 @@ namespace foremny.App01
             }
 
             return 0;
-
         }
+        
         public double ObtainAnIntegerOrADoubleToUse(String theQuestion) // obtain an int or double 
         {
             String tempInputString;
@@ -105,6 +107,7 @@ namespace foremny.App01
 
             return theNumber;
         }
+        
         public char PickAFunctionToUse() // pick a char then send it to display function and calculator
         {
             String function;
@@ -121,6 +124,7 @@ namespace foremny.App01
 
             return functionType;
         }
+        
         public bool CanBeDouble(String tempInputString) // doc taught/ wrote in class
         {
             int lookAtCharAt = 0;
@@ -147,6 +151,7 @@ namespace foremny.App01
 
             return true;
         }
+        
         public double AdditionFunction(double numberOne, double numberTwo) // performs addition
         {
             double result;
@@ -155,6 +160,7 @@ namespace foremny.App01
 
             return result;
         }
+        
         public double SubtractionFunction(double numberOne, double numberTwo) // performs subtraction
         {
             double result;
@@ -163,6 +169,7 @@ namespace foremny.App01
 
             return result;
         }
+        
         public double MultiplicationFunction(double numberOne, double numberTwo) // performs multiplication
         {
             double result;
@@ -171,6 +178,7 @@ namespace foremny.App01
 
             return result;
         }
+        
         public double NonIntegerdivisionFunction(double numberOne, double numberTwo) // performs regular division 
         {
             CheckDenominatorForZero(numberTwo);
@@ -181,6 +189,7 @@ namespace foremny.App01
 
             return result;
         }
+        
         public double IntegerDivisionFunction(double numberOne, double numberTwo) // performs integer division
         {
             CheckDenominatorForZero(numberTwo);
@@ -192,6 +201,7 @@ namespace foremny.App01
             return result;
 
         }
+        
         public double ModulusFunction(double numberOne, double numberTwo) // performs modulus division 
         {
             CheckDenominatorForZero(numberTwo);
@@ -202,6 +212,7 @@ namespace foremny.App01
 
             return result;
         }
+        
         public void CheckDenominatorForZero(double numberTwo) // checks denominator for zero and exits program
         {
             string tryAgain;
@@ -215,10 +226,12 @@ namespace foremny.App01
                 DetermineToContinue(tryAgain);
             }
         }
+        
         public void DisplayCalculatorResults(double numberOne, double numberTwo, double results, char functionType) // displays the results
         {
             Console.WriteLine("\nThe results of " + numberOne + " " + functionType + " " + numberTwo + " is: " + results);
         }
+        
         public String ContinueUsingCalculator() // question and decision to continue
         {
             String tempString;
@@ -229,6 +242,7 @@ namespace foremny.App01
 
             return tempString;
         }
+        
         public void DetermineToContinue(String choice) // if yes calculate again, if no exit
         {
             if (choice == ("yes"))
@@ -265,12 +279,12 @@ namespace foremny.App01
                 System.Environment.Exit(1);
             }
         }
+        
         public void ExitTheCalculatorProgram()
         {
             Console.WriteLine("\nEnd of program");
 
             System.Environment.Exit(1);
         }
-
     }
 }
